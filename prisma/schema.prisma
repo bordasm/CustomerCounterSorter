@@ -1,0 +1,21 @@
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Customer {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  telepules String
+  lat       Decimal? @db.Decimal(9, 6)
+  lon       Decimal? @db.Decimal(9, 6)
+  budget    Int?
+  note      String?
+
+  @@map("customers")
+}

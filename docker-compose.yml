@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: customer_distance
+      POSTGRES_PASSWORD: customer_distance
+      POSTGRES_DB: customer_distance
+    ports:
+      - "5433:5432"
+    volumes:
+      - customer_distance_pgdata:/var/lib/postgresql/data
+
+volumes:
+  customer_distance_pgdata:
