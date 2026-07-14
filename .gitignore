@@ -1,0 +1,31 @@
+.claude/settings.local.json
+.claude/skills
+_bmad/
+_bmad-output/
+tmp/
+.env
+.env.local
+logs/
+*.log
+bmad.prompt
+superpowers.prompt
+
+# IDE
+/.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# System
+.DS_Store
+Thumbs.db
+
+# Node / build
+node_modules/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+.pnpm-store/
