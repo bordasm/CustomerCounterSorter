@@ -1,4 +1,4 @@
-import type { Coordinates } from "./coordinates.js";
+import { BUDAPEST, type Coordinates } from "./coordinates.js";
 import { haversineDistanceKm } from "./haversine.js";
 
 export interface CustomerWithCoordinates {
@@ -14,8 +14,6 @@ export interface CustomerWithCoordinates {
 export interface CustomerWithDistance extends CustomerWithCoordinates {
   distanceKm: number | null;
 }
-
-const BUDAPEST: Coordinates = { lat: 47.4979, lon: 19.0402 };
 
 function roundToOneDecimal(value: number): number {
   return Math.round(value * 10) / 10;

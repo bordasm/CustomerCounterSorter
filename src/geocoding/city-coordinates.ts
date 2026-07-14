@@ -1,7 +1,7 @@
-import type { Coordinates } from "../geo/coordinates.js";
+import { BUDAPEST, type Coordinates } from "../geo/coordinates.js";
 
 export const CITY_COORDINATES: ReadonlyMap<string, Coordinates> = new Map([
-  ["budapest", { lat: 47.4979, lon: 19.0402 }],
+  ["budapest", BUDAPEST],
   ["vienna", { lat: 48.2082, lon: 16.3738 }],
   ["munich", { lat: 48.1351, lon: 11.582 }],
   ["milan", { lat: 45.4642, lon: 9.19 }],

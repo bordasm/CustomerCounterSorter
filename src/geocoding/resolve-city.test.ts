@@ -11,7 +11,8 @@ describe("resolveCity", () => {
   });
 
   it("is accent-insensitive", () => {
-    expect(resolveCity("Krakow")).toEqual(resolveCity("Kraków"));
+    expect(resolveCity("Krakow")).toEqual({ lat: 50.0647, lon: 19.945 });
+    expect(resolveCity("Kraków")).toEqual({ lat: 50.0647, lon: 19.945 });
   });
 
   it("resolves Budapest district notations to the capital", () => {
