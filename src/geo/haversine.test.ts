@@ -17,6 +17,15 @@ describe("haversineDistanceKm", () => {
     expect(haversineDistanceKm(BUDAPEST, BUDAPEST)).toBe(0);
   });
 
+  it("returns a finite distance for antipodal points", () => {
+    const antipode = { lat: -BUDAPEST.lat, lon: BUDAPEST.lon - 180 };
+
+    const distance = haversineDistanceKm(BUDAPEST, antipode);
+
+    expect(distance).not.toBeNull();
+    expect(Number.isFinite(distance as number)).toBe(true);
+  });
+
   it("returns null when either coordinate is null", () => {
     expect(haversineDistanceKm(BUDAPEST, null)).toBeNull();
     expect(haversineDistanceKm(null, BUDAPEST)).toBeNull();

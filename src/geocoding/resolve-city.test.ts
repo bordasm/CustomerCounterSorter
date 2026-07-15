@@ -26,4 +26,8 @@ describe("resolveCity", () => {
   it("returns null for a city missing from the reference table", () => {
     expect(resolveCity("Atlantis")).toBeNull();
   });
+
+  it("does not match an unrelated city name that merely starts with 'budapest'", () => {
+    expect(resolveCity("Budapestfoo")).toBeNull();
+  });
 });

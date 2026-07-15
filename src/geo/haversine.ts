@@ -22,7 +22,8 @@ export function haversineDistanceKm(
   const h =
     Math.sin(dLat / 2) ** 2 +
     Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) ** 2;
-  const c = 2 * Math.atan2(Math.sqrt(h), Math.sqrt(1 - h));
+  const clampedH = Math.min(1, Math.max(0, h));
+  const c = 2 * Math.atan2(Math.sqrt(clampedH), Math.sqrt(1 - clampedH));
 
   return EARTH_RADIUS_KM * c;
 }

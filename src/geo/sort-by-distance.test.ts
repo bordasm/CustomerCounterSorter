@@ -90,8 +90,7 @@ describe("sortByDistanceFromBudapest", () => {
     });
 
     const [result] = sortByDistanceFromBudapest([vienna]);
-    const distance = result.distanceKm as number;
 
-    expect(Number.isInteger(distance * 10)).toBe(true);
+    expect(result.distanceKm).toBe(214);
   });
 });

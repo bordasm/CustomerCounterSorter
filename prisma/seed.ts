@@ -21,7 +21,7 @@ async function main(): Promise<void> {
   const raw = readFileSync(seedFilePath, "utf-8");
   const customers = JSON.parse(raw) as SeedCustomer[];
 
-  for (const customer of customers) {
+  const upserts = customers.map((customer) => {
     const coordinates = resolveCity(customer.location.city);
 
     if (coordinates === null) {
@@ -30,7 +30,7 @@ async function main(): Promise<void> {
       );
     }
 
-    await prisma.customer.upsert({
+    return prisma.customer.upsert({
       where: { name: customer.name },
       update: {
         telepules: customer.location.city,
@@ -48,7 +48,9 @@ async function main(): Promise<void> {
         note: customer.note,
       },
     });
-  }
+  });
+
+  await prisma.$transaction(upserts);
 
   console.log(`[seed] upserted ${customers.length} customers`);
 }
