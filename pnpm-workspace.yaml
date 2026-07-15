@@ -1,3 +1,5 @@
+# Single-package project; this file exists only to allow the postinstall
+# build scripts below (pnpm blocks them by default for supply-chain safety).
 packages: []
 
 allowBuilds:

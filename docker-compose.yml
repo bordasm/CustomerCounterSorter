@@ -10,6 +10,11 @@ services:
       - "5433:5432"
     volumes:
       - customer_distance_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U customer_distance"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
 
 volumes:
   customer_distance_pgdata:

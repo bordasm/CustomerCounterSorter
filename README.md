@@ -7,7 +7,7 @@ offline fut.
 
 ## Előfeltételek
 
-- Node.js >= 20.6
+- Node.js >= 22
 - pnpm >= 11 (a `pnpm-workspace.yaml` `allowBuilds` kulcsa pnpm v11+ szükséges)
 - Docker Desktop (a lokális Postgres-hez)
 
@@ -34,7 +34,7 @@ offline fut.
 4. Migráció alkalmazása:
 
    ```bash
-   pnpm exec prisma migrate deploy
+   pnpm db:migrate
    ```
 
 5. Seed betöltése (idempotens — többször is futtatható, nem duplikál):
