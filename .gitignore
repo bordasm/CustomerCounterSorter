@@ -2,6 +2,7 @@
 .claude/skills
 _bmad/
 _bmad-output/
+.superpowers/
 tmp/
 .env
 .env.local
