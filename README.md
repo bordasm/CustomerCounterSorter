@@ -1,6 +1,7 @@
 # Customer Distance Service
 
-Ez a repo az ** AI-ágensfejlesztés az alapoktól ** kurzus egyik elkészítendő feladatát tartalmazza.
+Ez a repo az ** AI-ágensfejlesztés az alapoktól ** robot_dreams kurzus egyik elkészítendő feladatát tartalmazza.
+https://robotdreams.hu/
 
 Kicsi, önálló REST szolgáltatás Postgres fölött. Betöltéskor minden ügyfélhez
 a településéből lat/lon készül egy lokálisan bundle-olt referenciából —
