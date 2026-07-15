@@ -1,5 +1,7 @@
 # Customer Distance Service
 
+Ez a repo az ** AI-ágensfejlesztés az alapoktól ** kurzus egyik elkészítendő feladatát tartalmazza.
+
 Kicsi, önálló REST szolgáltatás Postgres fölött. Betöltéskor minden ügyfélhez
 a településéből lat/lon készül egy lokálisan bundle-olt referenciából —
 nincs külső geokódoló hívás, nincs LLM-hívás, a szolgáltatás teljesen
